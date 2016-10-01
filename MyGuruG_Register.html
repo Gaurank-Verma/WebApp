@@ -1,0 +1,375 @@
+<html>
+<head>
+  <title>GuruG.Com | Learning Solution</title>
+  
+<script type="text/JavaScript">
+function validate()
+{
+  var u1=document.getElementById("UserId").value;           /*user id blank validation*/ 
+  if(u1=="")
+  {
+    alert("User Id field cannot be left blank");
+	return false;
+  }
+  
+  var u1_valid = /^([A-Za-z0-9])+$/;           /*user id character validation*/ 
+		if(u1_valid.test(u1)==false)
+		{
+			alert("user_id should be alphanumeric");
+			return false;
+		}
+  
+  var u2=document.getElementById("Password").value;           /*Password blank validation*/ 
+  if(u2=="")
+  {
+    alert("Password cannot be left blank");
+	return false;
+  }
+  
+  if(u2.length<8){                                                      /*Password length validation*/
+		alert("Password should not less than 8 digits");
+		return false;
+	}
+  
+  var u3=document.getElementById("ConfirmPassword").value;                /*Confirm Password blank validation*/
+  if(u3=="")
+  {
+    alert("Retype your Password");
+	return false;
+  }
+  
+  if(u2!==u3)                                                         /* Password & confirm password match validation*/
+  {
+    alert("Password does not match");
+	return false;
+   }
+  
+  var u4=document.getElementById("Name").value;            /*Name blank validation*/
+  if(u4=="")
+  {
+    alert("Name cannot be left blank");
+	return false;
+  }
+  
+  
+  var u4_valid = /^([A-Za-z])*\s{1}([A-Za-z])+$/;          /*Characters of name validation*/
+		if(u4_valid.test(u4)== false){
+			alert("Write your First Name and Last Name");
+			return false;
+		}
+  
+  var u5=document.getElementById("Email").value;            /*Email blank validation*/
+  if(u5=="")
+  {
+    alert("Email cannot be left blank");
+	return false;
+  }
+  
+  var u5_valid = /^([A-Za-z0-9_\-])+\@([A-Za-z0-9_\-])+\.([A-Za-z]{2,4})$/;       /*Characters of email validation*/
+			if(u5_valid.test(u5)==false){
+				alert("Plz enter a valid E-mail");
+				return false;
+			}
+  
+  var u6=document.getElementById("Contact").value;              /*Contact blank validation*/
+  if(u6=="")
+  {
+    alert("Contact cannot be left blank");
+	return false;
+  }
+  
+  var u6_valid=/^\d{10,11}$/;                      /*Characters Contact blank validation*/
+		if(u6_valid.test(u6)==false){
+			alert("Plz enter a valid 'Contact No.'");
+			return false;
+		}
+  
+  var u7=document.getElementById("Address").value;               /*Address blank validation*/
+  if(u7=="")
+  {
+    alert("Plz provide your 'Address'");
+	return false;
+  }
+ var textarea_valid = /^([\w\-\.])+$/;                           /*Characters of Address blank validation*/
+	//var textarea_valid = /^([w_\-])+$/;
+	if(textarea_valid.test(u7)==false){
+		alert("Address should be in alphanumeric");
+		return false;
+	}
+	
+var a=document.getElementById("male").checked;                  /*Radio [Gender] blank validation*/
+	var b=document.getElementById("female").checked;
+		if(a == false && b == false){
+			alert("Select your gender");
+			return false;
+		}
+		
+		
+var qualification = document.f1.qualification.value;             /*Dropdown [Qualification] blank validation*/
+		if(f1.qualification.selectedIndex<=0){
+			alert("Plz choose your 'Last Qualification'");
+			return false;
+		}
+	
+		
+    var c=document.getElementById("Physics").checked;                 /*Checkbox [Hobbies] blank validation*/
+	var d=document.getElementById("Chemistry").checked;
+	var e=document.getElementById("Maths").checked;
+	var f=document.getElementById("Computer").checked;
+	
+	if(c==false && d==false && e==false && f==false){
+		alert("Select atleast one of your interested subject");
+		return false;
+	}
+	
+}
+
+</script>
+  
+<style type="text/css">
+  
+ul{
+    list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+li{
+    float:left;
+}
+
+a:link, a:visited {
+    display:block;
+	width:150px;
+	font-size:20px;
+	font-weight:regular;
+	color:red;
+	background-color:black;
+	text-align:center;
+	padding:1px;
+	text-decoration:none;
+	text-transform:uppercase;
+}	
+
+a:hover, a:active{
+    background-color:green;
+}
+
+  
+#wrapper
+{
+  height:1000px;
+  width:1000px;
+  background-color:grey;
+}
+
+#header
+{
+  height:200px;
+  width:1000px;
+  background-color:orange;
+  float:left;
+}
+
+#inner1_header
+{
+  height:200px;
+  width:500px;
+  background-color:orange;
+  float:left;
+}
+
+#inner2_header
+{
+  height:200px;
+  width:500px;
+  background-color:orange;
+  float:left;
+}
+
+#sub_header
+{
+  height:50px;
+  width:800px;
+  background-color:black;
+  float:left;
+}
+
+#menu
+{
+  height:750px;
+  width:200px;
+  background-color:black;
+  float:left;
+}
+
+#content
+{
+  height:700px;
+  width:800px;
+  background-color:white;
+  float:left;
+}
+
+#inner1_content
+{
+  height:700px;
+  width:200px;
+  background-color:white;
+  float:left;  
+}
+
+#inner2_content
+{
+  height:700px;
+  width:400px;
+  background-color:white;
+  float:left;
+}
+
+#inner3_content
+{
+  height:700px;
+  width:200px;
+  background-color:white;
+  float:left;
+}
+
+#footer
+{
+  height:50px;
+  width:1000px;
+  background-color:black;
+  float:left;
+}
+</style>
+</head>
+<body>
+  <div id="Wrapper">
+    <div id="header">
+	
+	  <div id="inner1_header">        
+	    <br><br><br><br><br><br>
+	    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="White">My</font><font color="black">GuruG</font><font color="red">.com</font></h1>
+	 </div>
+	 
+	 <div id="inner2_header">
+	    <br><br><br>
+	    
+	 </div>
+	
+	</div>
+	
+	
+	
+    <div id="menu">
+	
+	  <br><br>
+			&nbsp;&nbsp;<font color="white">GuruG.com</font><br><br>
+			&nbsp;&nbsp;<font color="white">Learning solutions..</font><br><br>
+			&nbsp;&nbsp;<font color="white">Recent post</font><br><br>
+			&nbsp;&nbsp;<font color="white">Welcome to GuruG</font><br>
+	
+	</div>
+	
+	
+	
+    <div id="sub_header">
+	
+		<ul><br>
+		<li><a href="MyGuruG_Home.html">Home</a></li>
+		<li><a href="MyGuruG_About.html">About Us</a></li>
+		<li><a href="MyGuruG_Contact.html">Contact Us</a></li>
+		<li><a href="MyGuruG_Register.html">Register</a></li>
+		</ul>
+	
+	</div>
+	
+	
+	
+    <div id="content">
+	
+		<center>
+		<h1>~Registration Page~</h1>
+		<form name="f1" action="Div_Thanks.html" onSubmit="return validate()" method="post">
+		<table>
+		<tr>
+			<td>Choose User Id:</td>
+			<td><input type="text" name="UserId" id="UserId"></td>
+		</tr>
+		<tr>
+			<td>Password:</td>
+			<td><input type="Password" name="Password" id="Password"></td>
+		</tr>
+		<tr>
+			<td>Confirm Password:</td>
+			<td><input type="Password" name="ConfirmPassword" id="ConfirmPassword"></td>
+		</tr>
+		<tr>
+			<td>Name:</td>
+			<td><input type="text" name="Name" id="Name"></td>
+		</tr>
+		<tr>
+			<td>Email:</td>
+			<td><input type="text" name="Email" id="Email"></td>
+		</tr>
+		<tr>
+			<td>Contact:</td>
+			<td><input type="number" name="Contact" id="Contact"></td>
+		</tr>
+		<tr>
+			<td>Address:</td>
+			<td><textarea name="Address" rows="10" cols="10" id="Address"></textarea></td>
+		</tr>
+		<tr>
+			<td>Gender:</td>
+			<td><input type="radio" name="Gender" id="male" value="Male">Male<input type="radio" name="Gender" id="female" value="Female">Female</td>
+		</tr>
+		<tr>
+			<td>Last Qualification:</td>
+			<td><select name="qualification" id="qualification">
+					<option value="0">Select</option>
+					<option value="1">5th</option>
+					<option value="2">6th</option>
+					<option value="3">7th</option>
+					<option value="4">8th</option>
+					<option value="5">9th</option>
+			</td>
+		</tr>
+		<tr>
+			<td>Interests:</td>
+			<td><input type="checkbox" name="Interests" id="Physics" value="Physics">Physics
+				<input type="checkbox" name="Interests" id="Chemistry" value="Chemistry">Chemistry
+				<input type="checkbox" name="Interests" id="Maths" value="Maths">Maths
+				<input type="checkbox" name="Interests" id="Computer" value="Computer">Computer
+			</td>
+		</tr>
+		<tr>
+			<td><input type="Submit" value="Register">
+				<input type="reset" value="Reset">
+			</td>
+		</tr>
+		</table>
+		</form>
+	</div>
+	
+    <div id="footer">
+	
+	    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+        <font color="white">Owned & developed by Gaurank Verma for Mahesh Sir</font>
+	
+	</div>
+	
+  </div>
+</body>
+</html>  
+
+
+
+
+
+
+
+
+

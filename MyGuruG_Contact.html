@@ -1,0 +1,329 @@
+<html>
+<head>
+  <title>GuruG.Com | Learning Solution</title>
+  
+<script type="text/JavaScript">
+function validate()
+{
+  var u1=document.getElementById("UserId").value;           /*user id blank validation*/ 
+  if(u1=="")
+  {
+    alert("User Id field cannot be left blank");
+	return false;
+  }
+  
+  var u1_valid = /^([A-Za-z0-9])+$/;           /*user id character validation*/ 
+		if(u1_valid.test(u1)==false)
+		{
+			alert("user_id should be alphanumeric");
+			return false;
+		}
+  
+  var u2=document.getElementById("Password").value;           /*Password blank validation*/ 
+  if(u2=="")
+  {
+    alert("Password cannot be left blank");
+	return false;
+  }
+  
+  if(u2.length<8){                                                      /*Password length validation*/
+		alert("password should not less than 8 digits");
+		return false;
+	}
+	
+ var u5=document.getElementById("Email").value;            /*Email blank validation*/
+  if(u5=="")
+  {
+    alert("Email cannot be left blank");
+	return false;
+  }
+  
+  var u5_valid = /^([A-Za-z0-9_\-])+\@([A-Za-z0-9_\-])+\.([A-Za-z]{2,4})$/;       /*Characters of email validation*/
+			if(u5_valid.test(u5)==false){
+				alert("Plz enter a valid E-mail");
+				return false;
+			}
+			
+  var u6=document.getElementById("Contact").value;              /*Contact blank validation*/
+  if(u6=="")
+  {
+    alert("Contact cannot be left blank");
+	return false;
+  }
+  
+  var u6_valid=/^\d{10,11}$/;                      /*Characters Contact blank validation*/
+		if(u6_valid.test(u6)==false){
+			alert("Plz enter a valid 'Contact No.'");
+			return false;
+		}
+		
+var u7=document.getElementById("Feedback").value;               /*Address blank validation*/
+  if(u7=="")
+  {
+    alert("Feedback area cannot be left blank");
+	return false;
+  }
+ var textarea_valid = /^([\w\-\.])+$/;                           /*Characters of Address blank validation*/
+	//var textarea_valid = /^([w_\-])+$/;
+	if(textarea_valid.test(u7)==false){
+		alert("Feedback should be in alphanumeric");
+		return false;
+	}
+}
+</script>
+  
+<style type="text/css">
+  
+ul{
+    list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+li{
+    float:left;
+}
+
+a:link, a:visited {
+    display:block;
+	width:150px;
+	font-size:20px;
+	font-weight:regular;
+	color:red;
+	background-color:black;
+	text-align:center;
+	padding:1px;
+	text-decoration:none;
+	text-transform:uppercase;
+}	
+
+a:hover, a:active{
+    background-color:green;
+}
+
+  
+#wrapper
+{
+  height:1000px;
+  width:1000px;
+  background-color:grey;
+}
+
+#header
+{
+  height:200px;
+  width:1000px;
+  background-color:orange;
+  float:left;
+}
+
+#inner1_header
+{
+  height:200px;
+  width:500px;
+  background-color:orange;
+  float:left;
+}
+
+#inner2_header
+{
+  height:200px;
+  width:500px;
+  background-color:orange;
+  float:left;
+}
+
+#sub_header
+{
+  height:50px;
+  width:800px;
+  background-color:black;
+  float:left;
+}
+
+#menu
+{
+  height:750px;
+  width:200px;
+  background-color:black;
+  float:left;
+}
+
+#content
+{
+  height:700px;
+  width:800px;
+  background-color:white;
+  float:left;
+}
+
+#inner1_content
+{
+  height:700px;
+  width:200px;
+  background-color:white;
+  float:left;  
+}
+
+#inner2_content
+{
+  height:700px;
+  width:400px;
+  background-color:white;
+  float:left;
+}
+
+#inner3_content
+{
+  height:700px;
+  width:200px;
+  background-color:white;
+  float:left;
+}
+
+#inner_half1_content
+{
+  height:700px;
+  width:400px;
+  background-color:white;
+  float:left;  
+}
+
+#inner_half2_content
+{
+  height:700px;
+  width:400px;
+  background-color:white;
+  float:left;  
+}
+
+#footer
+{
+  height:50px;
+  width:1000px;
+  background-color:black;
+  float:left;
+}
+</style>
+</head>
+<body>
+  <div id="Wrapper">
+    <div id="header">
+	
+	  <div id="inner1_header">        
+	    <br><br><br><br><br><br>
+	    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="White">My</font><font color="black">GuruG</font><font color="red">.com</font></h1>
+	 </div>
+	 
+	 <div id="inner2_header">
+	    <br><br><br>
+	   
+	 </div>
+	
+	</div>
+	
+	
+	
+    <div id="menu">
+	
+	  <br><br>
+			&nbsp;&nbsp;<font color="white">GuruG.com</font><br><br>
+			&nbsp;&nbsp;<font color="white">Learning solutions..</font><br><br>
+			&nbsp;&nbsp;<font color="white">Recent post</font><br><br>
+			&nbsp;&nbsp;<font color="white">Welcome to GuruG</font><br>
+	
+	</div>
+	
+	
+	
+    <div id="sub_header">
+	
+		<ul><br>
+		<li><a href="MyGuruG_Home.html">Home</a></li>
+		<li><a href="MyGuruG_About.html">About Us</a></li>
+		<li><a href="MyGuruG_Contact.html">Contact Us</a></li>
+		<li><a href="MyGuruG_Register.html">Register</a></li>
+		</ul>
+	
+	</div>
+	
+	
+	
+    <div id="content">
+	  
+	  <div id="inner_half1_content">
+	  
+		<center>
+		<br><br><br>
+		<table>
+		<tr>
+			<form name="f1" action=".html" onSubmit="return validate()" method="post"> 
+			<h2> Contact Form </h2>
+			<td>User id:</td>
+			<td><input type="text" name="user" id="UserId"></td>
+		</tr> 
+
+		<tr>
+			<td>Password:</td>
+			<td><input type="password" name="password" id="Password">
+		</tr>
+
+		<tr>
+			<td>Email:</td>
+			<td><input ytpe="text" name="email" id="Email"></td>
+		</tr>
+ 
+		<tr>
+			<td>Phone No.:</td>
+			<td><input type="text" name="phone" id="Contact"></td>
+		</tr>
+ 
+		<tr>
+			<td>Feedback:</td>
+			<td><textarea name "feedback" rows="8" cols="8" id="Feedback"></textarea></td>
+		</tr>
+
+		<tr>
+			<td><input type="submit" value="Submit"></td> 
+			<td><input type="reset" value="Reset"></td> 
+		</tr>
+		</table>
+
+	  
+	  </div>
+	  
+	  <div id="inner_half2_content">
+	  
+		<br><br><br>
+		<h2>Contact Info</h2>
+		<ul>
+			<li><font size=+2>Address:</font>&nbsp;N.P: 162, Salt Lake, Sec 5, Kolkata - 91, WB.</li> 
+			<li><font size=+2>Contact Us:</font>&nbsp;1800 214 336</li> 
+			<li><font size=+2>E-mail Id:</font>&nbsp;maheshg@gmail.com</li> 
+		</ul>
+
+	  </div>
+	  
+	</div>
+	
+	
+    <div id="footer">
+	
+	    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+        <font color="white">Owned & developed by Gaurank Verma for Mahesh Sir</font>
+	
+	</div>
+	
+  </div>
+</body>
+</html>  
+
+
+
+
+
+
+
+
+
